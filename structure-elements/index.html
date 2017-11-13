@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/screen.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <p>Four Structural elements: <span>section, header, footer, article and aside</span>. This element along with nav, h1..h6, p, ul, ol, dl, strong and em, provide and enrich website semantic that help undestand the meaning and definition of each structural element</p>
+    <p>On the other hand 2 non-semantic elements are also useful to provide structure and sytling. These are div and span. div is used to eclose blocks or sections of the website to provide different styling via class attributes. Span is used to target and provide styling for inline elements like words that can't be given by strong and em</p>
+    <p>Sections are used to provide meaning about the different portions of the website and to provide styling to them. In addition, every h1..h6 tags looks different within sections. So every section and nested sections h1 are automatically downgrade to the next h level to represent a lesser importance</p>
+  </header>
+  <header>
+    <h1>My Website</h1>
+    <p>Slogan</p>
+
+    <p>Use nav element to enclose website navegation menu</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About US</a></li>
+        <li><a href="index.html">Contact US</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section>
+    <article>
+      <header>
+        <h2>Sample Article or Post or standalong content</h2>
+        <p>Article date</p>
+      </header>
+  
+      <div class="article-body">
+          <p class="highlight">Article content with a span use for the <span clsss="brand">brand colour</span> </p>
+      </div><!--/article-body-->
+      
+  
+      <aside>
+        <h3>Glossary</h3>
+        <p>Example glossary. It's not really part of the article so it can be wrapped within the aside tags</p>
+      </aside>
+      
+      <footer>
+        <p>Post category and number of comments</p>   
+      </footer>
+    </article>
+  </section>
+ 
+  
+  <article>
+    <header>
+        <h2>Sample of another article or Post or standalong content</h2>
+        <p>Article date</p>
+    </header>
+    
+    <p>Article content</p>
+
+    <footer>
+      <p>Post category and number of comments</p>   
+    </footer>
+  </article>
+
+  <aside>
+      <h2>Sidebar</h2>
+      <p>To inclue content relevant to the website as a whole, not just the current page or section</p>    
+  </aside>
+  
+  <footer>
+      <p class="highlight">&copy; 2017 - Footer of the website</p>
+  </footer>
+  
+</body>
+</html>

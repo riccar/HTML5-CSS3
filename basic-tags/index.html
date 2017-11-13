@@ -1,0 +1,90 @@
+<!--Tell the browser we are using HTML5-->
+<!DOCTYPE html>
+<!--Root of the element. Must be always present-->
+<html>
+  <!--Header tag is to incluide information about the page like title and character encoding-->
+  <header>
+    <meta charset="utf-8">
+    <title>Example Page</title>
+  </header>
+  <body>
+
+    <h1>Header 1</h1>
+    <p>Paragraph with a <a href="favourite-colours.html">link to my favourite colours</a></p>
+    <p>Lists</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <ul>
+        <li>3.1</li>
+        <li>3.2</li>
+        <li>3.3</li>
+      </ul>
+    </ul>
+
+    <ol>
+      <li>first</li>
+      <li>second</li>
+    </ol>
+
+   
+    <p>Description list dl description term dt and description definition dd</p>
+    <dl>
+      <dt>Title</dt>
+      <dd>An imaginary book</dd>
+      <dt>Author</dt>
+      <dd>Ric</dd>
+      <dd>and Co</dd>
+      <dt>Number of pages</dt>
+      <dd>500</dd>
+    </dl>
+
+    <p>Examples of <strong>Strong</strong> for IMPORTANT words and <em>italics</em> to emphasize so screen readers can make emphasis when reading
+    Or we can use <i>i tag</i> but just for presentation purpose not to really emphasize the word</p>
+
+    <p>Special Characters. Although they can be used straight from the keywords. It's not a good idea to be used because they are used within the HTML syntax </p>
+    <ul>
+      <li>Right single quote: &rsquo;</li>
+      <li>Left single quote: &lsquo;</li>
+      <li>Right double quote: &rdquo;</li>
+      <li>Left double quote: &ldquo;</li>
+      <li>Ampersands: &amp;</li>
+      <li>Greater than: &gt;</li>
+      <li>Less than: &lt;</li>
+      <li>Copyright: &copy;</li>
+      <li>Register symbol: &reg;</li>
+      <li>Trademark symbol: &trade;</li>
+    </ul>
+
+    <!--
+      use folder name forward slash to drill down the folders
+      use ../ to go up one folder
+    -->
+    <h1>Images</h1>
+    <img src="images/me@linkedin.png" alt="me">
+    <!--
+    For audio files create the audio tag and add the attribute controls so the browser
+    can display the play, pause, stop and volume controls
+    then add the source with the audio path and name and the type audio/mpeg
+    For browser legacy support create an ogg version of the auido file and add 
+    its corresponding tag
+    -->
+    <h1>Audio files</h1>
+    <audio controls>
+      <source src="audio/ukulele.mp3" type="audio/mpeg">
+      <source src="audio/ukulele.ogg" type="audio/ogg">
+      <!--Add a link to the audio for old browser compatibility-->  
+      <a href="audio/ukulele.mp3">Ukulele audio recording</a>
+    </audio>
+
+    <h1>Video Files</h1>
+    <video controls>
+      <!--The browser will stop request as soon as it finds the video that is compatibile-->
+      <source src="video/example.mp4" type="video/mp4">
+      <!--Add the following two lines for browser compatibility-->
+      <source src="video/example.webm" type="video/webm">
+      <source src="video/example.ogv" type="video/ogg">
+    </video>
+  </body>
+</html>

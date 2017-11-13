@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Form</title>
+</head>
+<body>
+  <p>Two ways to associate labes with form inputs. By using the for in the label to match the input id or by nesting input into label. The former is more supported </p>
+  <form action="">
+    <label >First Name:
+        <input type="text" name="firstName">
+    </label>
+
+    <br>
+    <label for="lastName">Last Name</label>
+    <input id="lastName" type="text" name="lastName">
+    
+
+    <p>Use fieldset and legend to wrap fields</p>
+    <fieldset>
+      <p>By using the email type the form automatically validates the email format and also shows the at sign for touch screens and soft-keywords</p>  
+      <label>Email:
+        <input type="email" name="email">
+      </label>
+
+      <br>
+      <label for="telephone">Telephone</label>
+      <input id="telephone" type="tel" name="telephone">
+
+      <br>
+      
+          <legend>Message me</legend>
+      <label for="yourMessage">Message</label>
+      <textarea id="yourMessage" name="yourMessage"></textarea>
+    </fieldset>
+
+    <br>
+    <br>
+    <label for="favouriteColour">Favourite Colour</label>
+    <select id="favouriteColour" name="favouriteColour">
+      <option value="colourRed">Red</option>
+      <option value="colourBlue">Blue</option>
+      <option value="colourOrange">Orange</option>
+    </select>
+
+    <br>
+
+    <fieldset>
+      <legend>What is your favourite meal</legend>
+      <input type="radio" id="breakfast" name="favouriteMeal" value="meal1"><label for="breakfast">Breakfast</label>
+      <input type="radio" id="brunch" name="favouriteMeal" value="meal2"><label for="brunch">Brunch</label>
+      <input type="radio" id="lunch" name="favouriteMeal" value="meal3"><label for="lunch">Lunch</label>    
+    </fieldset>
+
+    <br>
+    <fieldset>
+      <legend>What meal you enjoy</legend>
+      <input type="checkbox" id="breakfastCB" name="favouriteMeal" value="meal1"><label for="breakfastCB">Breakfast</label>
+      <input type="checkbox" id="brunchCB" name="favouriteMeal" value="meal2"><label for="brunchCB">Brunch</label>
+      <input type="checkbox" id="lunchCB" name="favouriteMeal" value="meal3"><label for="lunchCB">Lunch</label>    
+    </fieldset>
+    
+    
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

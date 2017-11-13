@@ -1,0 +1,69 @@
+/*Type selector: name of the html element to target*/
+/*Inside every selector there are delcarations*/
+h1 {
+  color: orange;
+  text-align: center;
+}
+
+/*Descendant selector to target element only inside other elements. Only the last element of the chain is affected by the declarations*/
+header p {
+  color: green;
+
+}
+
+header p span {
+  color: blue;
+}
+
+/*Class selector: customized names to use as class attribute of any html tag to target particular elements*/
+.highlight1 {
+  background-color: yellow;
+}
+
+.brand {
+  background-color: blue;
+}
+
+/*Class selectors can also be used within Descendant selectors to target classes only within specific elements*/
+footer .highlight1 {
+  background-color: LightGray;
+}
+
+/*Cascading means that the browser apply the style in cascade across all the html elements and sub elements. So if a element style is changed, all the style of the sub elements are also changed. Then if another sub- element is also targeted the style from the super-element can be overriden and this new sub-element and all its children can inherit the new style. Not all the properties can be inherited.*/
+
+/*Specificity: Is how the browser resolves confilcts when two or more styling properties colide. For instance these two selectors are using the same font colour property. One for all the pragraphs and one for everthing within the footer including the pragraphas. IN this case footer's paragraph can't show the organge font inherited from the footer*/
+
+
+
+/*Specificity rules:
+1.- Decendant selectos are more specific than type selectors
+*/
+p {
+  color: green;
+}
+
+/*By adding a decendant selector I'm adding specificity to the class selectors and the conflict is resolved*/
+footer p {
+  color: orange;
+}
+
+/*2.- Deeply nested selectors are more specific than shallow selectors*/
+
+
+/*So the next deeply nested selector overrides the above one*/
+body footer p {
+  color: blue;
+}
+
+/*3.- class selectors are more specific than type and decendant selectors*/
+.highlight {
+  color: purple;
+}
+
+/*4.- A decendant selector specified by a class is more specific than a solitary descendant selector*/
+footer .highlight {
+  color: grey;
+}
+
+/*5.- When two rules have identical specificity value, the one comming last takes presedence*/
+

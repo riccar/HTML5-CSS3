@@ -1,0 +1,16 @@
+.box-a {
+  background-color: LightGrey;
+  padding: 30px; /*inside padding*/
+  border: 3px solid black; /*Grows from the edge towards the inside of the box*/
+  margin-bottom: 20px; /*Outsinde margin*/
+  width: 250px;
+  height: 150px;
+}
+
+/*Lets make box B to be of the same size as box A without margin and padding*/
+/*By adding box-sizing: border-box property to box-a, it shrinks the box by removing padding and border. This isn't fully compatible*/
+.box-b {
+  background-color: orange;
+  width: 316px;
+  height: 216px;
+}
