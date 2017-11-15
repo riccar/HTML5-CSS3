@@ -1,18 +1,60 @@
 
+/*****Custom Fonts*****/
+/*Using custom fonts. Download desired fonts and copy into the css folder
+Use the following special tag to load the font.
+Add this code before referencing the font*/
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+/*****End Custom Fonts*****/
+
 html {
   background-color: #869960;
 }
 
 body {
-  font-family: Tahoma, sans-serif;
+ /*If the OS doesn't have the first font type it falls back to the next one
+  The last item in the list should be a keyword rather than a font name. A keyword is a default system
+  font type*/
+  /*font-family: Helvetica, Arial, sans-serif;*/
+  font-family: 'PTSans', Tahoma, sans-serif;
   font-size: 87%;
 }
-
 
 /*Limit image width to 100% of its container*/
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .image-banner {
@@ -76,6 +118,26 @@ header p {
 
 .main-menu {
   margin-top: 20px;
+}
+
+.main-area h2 {
+  font-size: 200%;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+  /*Add shadow to the font: horizontal offset 10px, vertical 
+  offset 2px, blur 10px color black transparent 40% */
+  text-shadow: 2px 10px 10px rgba(0, 0, 0, .4);
+  text-transform: lowercase;
+}
+
+.main-area p {
+  font-size: 110%;
+  /*Text can be align left, right and justify*/
+  text-align: left;
+  text-indent: 25px;
+  line-height: 1.5;
 }
 
 .main-menu ul {
@@ -163,75 +225,6 @@ table tbody tr:nth-child(even) td {
 }
 
 /*****End Table *****/
-
-/*****Start Form*****/
-
-form {
-  background-color: #ECECEC;
-  padding: 30px 40px;
-}
-
-input, select {
-  font-family: Tahoma, sans-serif;
-  font-size: 100%;
-}
-
-/*Hide labels this way so screen reading software don't ignore labels */
-.hidden-label {
-  /*Remove label from the nature page flow*/
-  position: absolute;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-input[type="email"], input[type="password"], 
-input[type="text"], input[type="number"], 
-input[type="tel"], select {
-  width: 100%;
-  display: block;
-  box-sizing: border-box;
-  padding: 0 10px;
-  height: 40px;
-  margin-bottom: 15px;
-  border: 1px solid #CDCDCD;
-  outline: none;
-
-}
-
-input[type="email"]:focus, input[type="password"]:focus, 
-input[type="text"]:focus, input[type="number"]:focus, input[type="tel"]:focus {
-  border: 1px solid #869960;
-  /*Create inside shadow for the text field in focus. 2px horizontal and vertical offset and 2px blur*/
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .10);
-}
-
-input[type="submit"] {
-  width: 100%;
-  display: block;
-  box-sizing: border-box;
-  background-color: #869960;
-  color: #FFF;
-  padding: 10px 0;
-  border: 1px solid #798A56;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  outline: none;
-}
-
-input[type="submit"]:hover, input[type="submit"]:focus {
-  border: 1px solid #535E3B;
-  background-color: #798A56;
-}
-
-.checkbox-text {
-  font-size: 85%;
-  color: #777;
-
-}
-
-/*****End Form*****/
 
 
 /*When the next element is also floated to the left with a smaller widht it will no longer wrap arround it*/
