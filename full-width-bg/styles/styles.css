@@ -1,0 +1,261 @@
+
+/*****Custom Fonts*****/
+/*Using custom fonts. Download desired fonts and copy into the css folder
+Use the following special tag to load the font.
+Add this code before referencing the font*/
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PT-Sans-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+/*****End Custom Fonts*****/
+
+html {
+  background-color: #869960;
+}
+
+body {
+ /*If the OS doesn't have the first font type it falls back to the next one
+  The last item in the list should be a keyword rather than a font name. A keyword is a default system
+  font type*/
+  /*font-family: Helvetica, Arial, sans-serif;*/
+  font-family: 'PTSans', Tahoma, sans-serif;
+  font-size: 87%;
+  margin: 0;
+  padding: 0;
+}
+
+/*Limit image width to 100% of its container*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.image-banner {
+  /*Make any child element with position: absolute to be relative to herself
+  once the element has a position relative it can be moved within its container without taking it out of the flow
+  eg left: -50px; but surronding elements are not aware of its position.
+  When 2 elements are using position relative or absolute the later in the html will be rendered on top. 
+  Use z-index to a bigger value to place it on top*/
+  position: relative;
+  
+}
+
+/*By default images are in-line elements so they possess default padding to separate them from other inline elements. This can be
+overriden by changing the display to block*/
+.image-banner img {
+  display: block;
+}
+
+/*Banner Overlay*/
+.banner-description {
+  /*Position abosulte set the element relative to the full web browser screen 
+  width and height and ignores any container so we can provide x and y coordenades
+  unless it finds the closets container element set as position relative. Then its position
+  becomes relative to this container*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, .65);
+  padding: 15px 25px;
+  
+}
+
+/*Decrease container width and center in page*/
+.container {
+  max-width: 940px;
+  /*Horizontally centered*/
+  margin: 0 auto;
+  /*Add margin so when the browser is shrinked a margin prevent the content from touching the browser sizes */
+  padding-left: 40px;
+  padding-right: 40px;
+  
+
+}
+
+header {
+  padding: 20px 0 0 0;
+  color: #FFF;
+  background-color: #617140;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 165%;
+}
+
+header p {
+  margin: 0;
+}
+
+/*****Site navigation*****/
+
+.main-menu {
+  margin-top: 20px;
+}
+
+.main-area h2 {
+  font-size: 200%;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+  /*Add shadow to the font: horizontal offset 10px, vertical 
+  offset 2px, blur 10px color black transparent 40% */
+  text-shadow: 2px 10px 10px rgba(0, 0, 0, .4);
+  text-transform: lowercase;
+}
+
+.main-area p {
+  font-size: 110%;
+  /*Text can be align left, right and justify*/
+  text-align: left;
+  text-indent: 25px;
+  line-height: 1.5;
+}
+
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li {
+  list-style: none;
+  float: left;
+  margin-right: 5px;
+}
+
+/*Anchors are elemnts automatically set to be displayed inline display: inline; therefore its padding and margin are not taking into account by surrounding elements
+add the property block to override this behaviour*/
+.main-menu a {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  padding: 10px 20px;
+  border: 3px solid #e5e9dc;
+  border-bottom: none;
+}
+
+.main-menu a:hover {
+  background-color: #e5e9dc;
+}
+
+/*****End site navigation*****/
+
+.content-area {
+  border-top: 3px solid #e5e9dc;
+  border-bottom: 3px solid #e5e9dc;
+  background-color: #FFF;
+}
+
+/*By setting a div contained in another div to float to the left or right, and a smaller width, 
+the next element down will wrap arround it to ocuppy the empty space left */
+.main-area {
+  width: 66%;
+  float: left;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/*****Start Table *****/
+table {
+  /*Remove border spacing to avoid double border effect*/
+  border-spacing: 0; 
+  /*Remove tick border when two borders are touching*/
+  border-collapse: collapse; 
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.col-item-name {
+  width: 60%;
+}
+
+.col-item-quantity, .col-item-price {
+  width: 20%;
+}
+
+table th {
+  text-align: left;
+  background-color: #869960;
+  color: #FFF;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .4);
+}
+
+table th, td {
+  border: 1px solid #869960;
+  padding: 5px;
+  vertical-align: top;
+}
+
+/*Target every even table body row (tr) with the pseudo class and then every table row data or column (td)*/
+table tbody tr:nth-child(even) td {
+  background-color: #E5E9DC;
+}
+
+/*Target every second and third row of the table (tr) using a pseudo class*/
+.grocery-list tr :nth-child(2), .grocery-list tr :nth-child(3) {
+  text-align: center;
+}
+
+/*****End Table *****/
+
+
+/*When the next element is also floated to the left with a smaller widht it will no longer wrap arround it*/
+.sidebar {
+  width: 33%;
+  float: left;
+  background-color: #e5e9cd;
+  padding: 20px 40px 20px 40px;
+  box-sizing: border-box;
+  font-size: 85%;
+}
+
+footer {
+  text-align: center;
+  font-size: 70%;
+  color: #999;
+  padding: 20px 0 20px 0;
+
+}
+
+/*As soon as the child elements are floated, the parent element is no longer aware of them. It's only aware of those not floating 
+To fix this, create an empty div at the end of the partent element but within it and add the property clear: both
+but, since it isn't a best practice to add empty div with no meaningful content, the following strategy is used
+Create a group class added to the parent element (container) and style as follow*/
+.fixbox:before, .fixbox:after {
+  content: "";
+  display: table;
+  clear: both;
+}
