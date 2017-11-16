@@ -185,7 +185,7 @@ header p {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .10);
   /*Add rounded corners to the box starting from the top left clock-wise*/
   border-radius: 10px 10px 10px 10px;
-  /*Elyptical rounding: horizontal radius by vertical radius*/
+  /*Elliptical rounding: horizontal radius by vertical radius*/
   /*border-radius: 40px/15px;*/
 
 }
