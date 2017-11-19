@@ -1,0 +1,62 @@
+html {
+  background-color: #fff;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  padding: 5px 17%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.example {
+  width: 240px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.example h3 {
+  margin: 0 0 8px 0;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+.example-a {
+  color: black;
+  background-color: #ddd;
+  /*Transform is the main property to transfor shapes. 
+  rotate the image 25deg clockwise */
+  /*transform: rotate(25deg);*/
+
+  /*scale the object 1.5 its original size. When scalling up or down the object always ocuppy its original space and will overlap other objects when scale up. Surronding object does not accomodate.*/
+  /*transform: scale(1.5);*/
+
+  /*skew property in Y and X axis*/
+  /*transform: skewY(-25deg) skewX(15deg);*/
+
+  /*set the origin or pivot point for all the transformation
+  effects horizontal 100% and vertical 0 = top right corner*/
+  transform-origin: 100% 0;
+
+  /*Translaet the object horizontally 100px and vertically 50px*/
+  transform: translate(100px, 50px);
+
+ 
+  /*Transormations are used for animation since they are hardware
+  accelerated so the anitmation is smoother than using position relative and top left right and bottom. The former is used for layout purpose*/
+  /*position: relative;
+  top: 50px;
+  left: 100px;*/
+ 
+}
+
+.example-b {
+  color: white;
+  background-color: #444;
+}
